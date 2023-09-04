@@ -19,43 +19,55 @@ let tahun = 2023; // assign nilai variabel tahun disini! (dengan angka antara 19
 
 //code switch case kamu disini
 
-switch(hari, bulan) {
-    case 0:
-        bulan = "Januari";
-        break;
+switch(bulan) {
     case 1:
-        bulan = "Februari";
+        bulan = "Januari";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 2:
-        bulan = "Maret";
+        bulan = "Februari";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 3:
-        bulan = "April";
+        bulan = "Maret";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 4:
-        bulan = "Mei";
+        bulan = "April";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 5:
-        bulan = "Juni";
+        bulan = "Mei";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 6:
-        bulan = "Juli";
+        bulan = "Juni";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 7:
-        bulan = "Agustus";
+        bulan = "Juli";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 8:
-        bulan = "September";
+        bulan = "Agustus";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 9:
-        bulan = "Oktober";
+        bulan = "September";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 10:
-        bulan = "November";
+        bulan = "Oktober";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
     case 11:
-        bulan = "Desember";
+        bulan = "November";
+        console.log (`${hari} ${bulan} ${tahun}`);
         break;
+    case 12:
+        bulan = "Desember";
+        console.log (`${hari} ${bulan} ${tahun}`);
+        break;
+    default:
+        console.log("Error, masukkan bulan dengan benar.")
 }
-
-console.log (`${hari} ${bulan} ${tahun}`);
