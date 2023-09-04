@@ -64,5 +64,3 @@ console.log(number-1);
 /* const hewan = 'jerapah'; 
 console.log(hewan);
 hewan = 'buaya'; */ 
-
-
