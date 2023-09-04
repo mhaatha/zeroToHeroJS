@@ -35,3 +35,5 @@ if (peran == 'Ksatria') {
 } else {
     console.log (`Kamu jadi minion aja ya, peran yang kamu pilih tidak ada.`)
 }
+
+// menambahkan comment
