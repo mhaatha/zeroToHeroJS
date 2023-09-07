@@ -29,7 +29,6 @@ for (let j = 10; j > 0; j--) {
 }  
 console.log(s)
 
-
 // let s = ""
 
 // for (let i = 5; i >= 0; i--) { 
