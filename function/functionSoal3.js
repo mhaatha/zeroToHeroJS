@@ -5,13 +5,13 @@
 
 //bikin fungsinya disini
 function processSentence(name, age, address, hobby) {
-    name = "Agus";
-    age = 30;
-    address = "Jln. Malioboro, Yogjakarta";
-    hobby = "gaming";
-    let words = `Nama saya ${name}, umur saya ${age}, alamat saya di ${address}, dan saya punya hobby yaitu ${hobby}`;
-    return words;
+    word = `Nama saya ${name}, umur saya ${age}, alamat saya di ${address}, dan saya punya hobby yaitu ${hobby}`;
+    return word;
 }
+let name = "Agus";
+let age = 30;
+let address = "Jln. Malioboro, Yogjakarta";
+let hobby = "gaming";
 
-let fullSentence = processSentence();
+let fullSentence = processSentence(name,age,address,hobby);
 console.log(fullSentence); // Menampilkan "Nama saya Agus, umur saya 30 tahun, alamat saya di Jln. Malioboro, Yogjakarta, dan saya punya hobby yaitu gaming!"
