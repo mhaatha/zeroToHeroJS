@@ -1,25 +1,21 @@
 let input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(input) {
-  let fullName = input[1] + "Elsharawy";
-  input.splice(1, 1, `${fullName}`);
-  let province = "Provinsi " + input[2];
-  input.splice(2, 1, `${province}`);
-  input.splice(4, 2, "Pria", "SMA Internasional Metro");
+  let fullName = input[1] + "Elsharawy"; // input[1] = "Roman Alamsyah " + "Elsharawy" = "Roman Alamsyah Elsharawy"
+  let province = "Provinsi " + input[2]; // "Provinsi " + input[2] = "Bandar Lampung" = "Provinsi Bandar Lampung"
+
+  input.splice(1, 1, `${fullName}`); // Menambahkan data pada index ke 1 dan menghapus 1 data
+  input.splice(2, 1, `${province}`); // Menambahkan data pada index ke 2 dan menghapus 1 data
+  input.splice(4, 1, "Pria", "SMA Internasional Metro"); // Menambahkan data pada index ke 4 dan menghapus 1 data ("Membaca")
   console.log(input);
-  let bulan = input[3].toString();
-  if (bulan == "21/05/1989") {
+
+  let bulan = input[3].split("/"); // input[3] = "21/05/1989" lalu "/" dihilangkan (split) maka "21" "05" "1989"
+  if (bulan[1] == "05") { // jika bulan[1] yang mana 05 == "05" = true 
     console.log("Mei");
   }
-  let formatTahun = input[3].split("/");
-  formatTahun.splice(0, 1, "1989");
-  formatTahun.splice(1, 1, "21");
-  formatTahun.splice(2, 1, "05");
-  console.log(formatTahun);
-  let tahun = input[3].toString()
-  if (tahun == "21/05/1989") {
-    console.log("21-05-1989")
-  }
+
+  console.log([bulan[2], bulan[0], bulan[1]]);
+  console.log(bulan.join("-")) // bulan = "21" "05" "1989" kita gabungkan(join) dan diberi tanda penghubung "-"
   console.log(input[1].substring(0,15))
 }
 
