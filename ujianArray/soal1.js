@@ -5,26 +5,19 @@ Diberikan sebuah function targetTerdekat(arr) yang menerima satu parameter berup
 // Jika sudah ditemukan, maka index x dikurang index o.
 
 function targetTerdekat(arr) {
-  let penampung = [];
+  let x = -1
+  let o = -1
   for (i = 0; i < arr.length; i++) {
-    if ("x" == arr[0]) {
-      return 1;
-    } else if (arr[i] == "x") {
-      penampung = penampung + [i];
-      break;
-    }
-  }
-  for (j = 0; j < arr.length; j++) {
-    if (!arr.includes("x")) {
+    if (arr[i] == "o") {
+      o = i // i = 2
+    } if (!arr.includes("x")) {
       return 0;
-    } else if (arr[j] == "o") {
-      const jarak = Math.abs(j - penampung)
-      if (jarak < penampung){
-        penampung = jarak
-      }
+    } else if (arr[i] == "x") {
+      x = i // i = 5
+      break
     }
   }
-  return parseInt(penampung);
+  return Math.abs(x-o)
 }
 
 // TEST CASES
