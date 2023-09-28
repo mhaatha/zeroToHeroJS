@@ -6,7 +6,6 @@ Diberikan sebuah function targetTerdekat(arr) yang menerima satu parameter berup
 
 function targetTerdekat(arr) {
   let penampung = [];
-  let posisiO = -1;
   for (i = 0; i < arr.length; i++) {
     if ("x" == arr[0]) {
       return 1;
