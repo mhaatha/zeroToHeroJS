@@ -22,13 +22,14 @@ maka output:
 
 function shoppingTime(memberId, money) {
   let shopping = {};
-  let listPurchased = [
-    "Sepatu Stacattu",
-    "Baju Zoro",
-    "Baju H&N",
-    "Sweater Uniklooh",
+  let items = [
     "Casing Handphone",
+    "Sweater Uniklooh",
+    "Baju H&N",
+    "Baju Zoro",
+    "Sepatu Stacattu",
   ];
+  let listPurchased = [];
   let listHarga = [1500000, 500000, 250000, 175000, 50000];
   listHarga.sort(function (a, b) {
     return a - b;
@@ -38,6 +39,7 @@ function shoppingTime(memberId, money) {
   for (let i = 0; i < listHarga.length; i++) {
     if (changeMoney >= listHarga[i]) {
       changeMoney -= listHarga[i];
+      listPurchased.push(items[i]);
     } else {
       break;
     }
