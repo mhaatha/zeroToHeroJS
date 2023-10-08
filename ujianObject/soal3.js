@@ -1,6 +1,6 @@
 function highestScore(students) {
   if (students.length === 0) {
-    return []
+    return {};
   }
   let sortable = [];
   for (let score in students) {
@@ -13,8 +13,10 @@ function highestScore(students) {
   let wolves = students.find((students) => students.class === "wolves");
   let tigers = students.find((students) => students.class === "tigers");
   let container = { foxes, wolves, tigers };
-  if (tigers === undefined) {
-    return container = {foxes, wolves}
+  for (let key in container) {
+    if(container[key] === undefined) {
+      delete container[key]
+    } 
   }
   return container
 }
