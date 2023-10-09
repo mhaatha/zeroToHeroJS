@@ -21,18 +21,23 @@ Output yang diharapkan berupa Object dengan format sebagai berikut:
 
 function graduates(students) {
   if (students.length === 0) {
-    return {}
+    return {};
   }
-  let foxes = students.filter((students) => students.class === "foxes" && students.score >= 75);
-  let wolves = students.filter((students) => students.class === "wolves" && students.score >= 75);
-  let tigers = students.filter((students) => students.class === "tigers" && students.score >= 75);
-  let container = {foxes, wolves, tigers}
-  for (let key in container) {
-    if(container[key].length === 0) {
-      delete container[key]
-    } 
+  let result = {};
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].score >= 75) {
+      const studentData = {
+        name: students[i].name,
+        score: students[i].score,
+      };
+
+      if (!result[students[i].class]) {
+        result[students[i].class] = [];
+      }
+      result[students[i].class].push(studentData);
+    }
   }
-  return container
+  return result;
 }
 
 console.log(
