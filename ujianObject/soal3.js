@@ -2,23 +2,19 @@ function highestScore(students) {
   if (students.length === 0) {
     return {};
   }
-  let sortable = [];
-  for (let score in students) {
-    sortable.push([score, students[score]]);
+  let container = {};
+  for (let i = 0; i < students.length; i++) {
+    const studentData = {
+      name: students[i].name,
+      score: students[i].score,
+    };
+    if (!container[students[i].class]) {
+      container[students[i].class] = studentData;
+    } else if (students[i].score > container[students[i].class].score) {
+      container[students[i].class] = studentData;
+    }
   }
-  sortable.sort(function (a, b) {
-    return a[1] - b[1];
-  });
-  let foxes = students.find((students) => students.class === "foxes");
-  let wolves = students.find((students) => students.class === "wolves");
-  let tigers = students.find((students) => students.class === "tigers");
-  let container = { foxes, wolves, tigers };
-  for (let key in container) {
-    if(container[key] === undefined) {
-      delete container[key]
-    } 
-  }
-  return container
+  return container; 
 }
 
 // TEST CASE
