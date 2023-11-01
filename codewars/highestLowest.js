@@ -3,16 +3,7 @@
 function highAndLow(numbers) {
   let strNum = numbers.split(" ");
   let realNumber = strNum.map(Number);
-  let lowest = realNumber[0];
-  let highest = realNumber[0];
-  for (let i = 0; i < realNumber.length; i++) {
-    if (realNumber[i] > highest) {
-      highest = realNumber[i];
-    } else if (realNumber[i] < lowest) {
-      lowest = realNumber[i];
-    }
-  }
-  return `${highest} ${lowest}`;
+  return `${Math.max(...realNumber)} ${Math.min(...realNumber)}`;
 }
 
 console.log(highAndLow("1 2 3 4 5 10"));
