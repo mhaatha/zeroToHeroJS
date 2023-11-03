@@ -1,8 +1,9 @@
 // https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/javascript
 
 function isIsogram(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (str.indexOf(str[i]) !== i) {
+  let toLower = str.toLowerCase();
+  for (let i = 0; i < toLower.length; i++) {
+    if (toLower.indexOf(toLower[i]) !== i) {
       return false;
     }
   }
