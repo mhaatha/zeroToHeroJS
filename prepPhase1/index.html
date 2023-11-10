@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="myDiv" class="header">
+      <h2>My To Do list</h2>
+      <input type="text" id="mySearch" placeholder="Search..." />
+      <span onclick="searchElement()" class="searchBtn">🔍</span> 
+
+      <input type="text" id="myInput" placeholder="Add..." />
+      <span onclick="newElement()" class="addBtn">+</span>
+    </div>
+
+    <ul id="myUL">
+        <li><a href="#">Hit the gym</a></li>
+        <li class="checked"><a href="#">Pay bills</a></li>
+        <li><a href="#">Pray</a></li>
+        <li><a href="#">Buy eggs</a></li>
+        <li><a href="#">Read a book</a></li>
+        <li><a href="#">Take a walk</a></li>
+    </ul>
+
+    <script src="main.js"></script>
+  </body>
+</html>
