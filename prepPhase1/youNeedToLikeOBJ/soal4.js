@@ -37,13 +37,19 @@ function travelingIndonesia(arr, emoney) {
   let cityName = [];
   let transportName = [];
   let object = {};
+
   for (let i = 0; i < arr.length; i++) {
-    let regexForName = /^(\w+)-/;
-    let regexForCity = /-(\w+)-(\w+)-/;
-    let regexForTransport = /-(\w+)$/;
+    let cities = ["Yogyakarta", "Semarang", "Surabaya", "Denpasar"];
+    let matchTransport = arr[i].match(regexForTransport);
     let matchName = arr[i].match(regexForName);
     let matchCity = arr[i].match(regexForCity);
-    let matchTransport = arr[i].match(regexForTransport);
+    let regexForCity = /-(\w+)-(\w+)-/;
+    let regexForTransport = /-(\w+)$/;
+    let regexForName = /^(\w+)-/;
+    let times = 0;
+    let price = 0;
+    let discount = 0;
+    
     if (matchName) {
       personName.push(matchName[1]);
     }
@@ -53,12 +59,7 @@ function travelingIndonesia(arr, emoney) {
     if (matchTransport) {
       transportName.push(matchTransport[1]);
     }
-  }
 
-  // [["Yogyakarta", "Semarang"],["Denpasar", "Surabaya"],["Semarang", "Denpasar"],];
-  for (let i = 0; i < arr.length; i++) {
-    let times = 0;
-    let cities = ["Yogyakarta", "Semarang", "Surabaya", "Denpasar"];
     for (let j = 0; j < cities.length; j++) {
       if (cityName[i][0] === cities[j]) {
         let destinationIndex = cities.indexOf(cityName[i][1]);
@@ -67,8 +68,6 @@ function travelingIndonesia(arr, emoney) {
         }
       }
     }
-    let price = 0;
-    let discount = 0;
     if (transportName[i] === "Pesawat") {
       price = 275000;
     } else if (transportName[i] === "Kereta") {
