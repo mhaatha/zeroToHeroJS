@@ -23,7 +23,6 @@ function consonantCounterRecursive(sentences) {
       case "b":
       case "c":
       case "d":
-      case "e":
       case "f":
       case "g":
       case "h":
