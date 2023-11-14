@@ -28,8 +28,19 @@ Buatlah function piramid (n) yang memberitahu berapa jumlah batu bata yang diper
 function piramid(n) {
   if (n < 1) {
     return n;
-  }                          
-  return n += piramid(n - 1) 
+  }
+  return (n += piramid(n - 1));
+  // piramid(5)
+  // n = 5 + piramid(4) = 9
+  // n = 9 + piramid(3) = 12
+  // n = 12 + piramid(2) = 14
+  // n = 14 + piramid(1) = 15
+  // n = 15 + piramid(0) = 15 + 0 = 15
+  // n = 5 + 10 = 15
+  // n = 4 + 6 = 10
+  // n = 3 + 3 = 6
+  // n = 2 + 1 = 3
+  // n = 1 + 0 = 1
 }
 
 // console.log(piramid()) // 0
