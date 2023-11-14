@@ -17,7 +17,18 @@ function angkaTerbesar(sentence) {
   if (sentence.length === 0) {
     return -1;
   }
-  return Math.max.apply(Math, sentence);
+  function biggest(numbers) {
+    if (numbers < 1) {
+      return sentence[0];
+    }
+    let highest = biggest(numbers - 1);
+    if (highest < sentence[numbers]) {
+      return sentence[numbers];
+    } else {
+      return highest;
+    }
+  }
+  return biggest(sentence.length - 1); // numbers = 4
 }
 
 // TEST CASES
